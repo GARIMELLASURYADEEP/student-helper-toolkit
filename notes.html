@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App - Student Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <a href="/" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Toolkit
+            </a>
+            <h1>Notes App</h1>
+        </header>
+
+        <main class="tool-container">
+            <div class="notes-header">
+                <input type="search" id="search-notes" placeholder="Search notes...">
+                <button class="btn btn-primary" id="add-note-btn">New Note</button>
+            </div>
+            <div id="notes-grid">
+                <!-- Notes will be dynamically inserted here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Note Modal -->
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Add New Note</h2>
+            <form id="note-form">
+                <input type="hidden" id="note-id">
+                <div class="form-group">
+                    <label for="note-title">Title</label>
+                    <input type="text" id="note-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="note-content">Content</label>
+                    <textarea id="note-content" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Note</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/notes.js"></script>
+</body>
+</html>

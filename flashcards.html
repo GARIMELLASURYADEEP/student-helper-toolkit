@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - Student Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <a href="/" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Toolkit
+            </a>
+            <h1>Flashcard Quiz Maker</h1>
+        </header>
+
+        <main class="tool-container flashcards-container">
+            <div class="flashcard-scene">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-face flashcard-face-front" id="flashcard-front">Click to flip</div>
+                    <div class="flashcard-face flashcard-face-back" id="flashcard-back"></div>
+                </div>
+            </div>
+            <div class="flashcard-controls">
+                <button class="btn" id="prev-card">Prev</button>
+                <span id="card-counter">0 / 0</span>
+                <button class="btn" id="next-card">Next</button>
+                <button class="btn" id="shuffle-cards">Shuffle</button>
+            </div>
+            <button class="btn btn-primary" id="add-card-btn">Add New Card</button>
+        </main>
+    </div>
+
+    <!-- Add Card Modal -->
+    <div id="card-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Flashcard</h2>
+            <form id="card-form">
+                <div class="form-group">
+                    <label for="card-question">Question (Front)</label>
+                    <textarea id="card-question" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="card-answer">Answer (Back)</label>
+                    <textarea id="card-answer" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Card</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/flashcards.js"></script>
+</body>
+</html>

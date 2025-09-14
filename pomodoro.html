@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer - Student Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="tool-header">
+            <a href="/" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Toolkit
+            </a>
+            <h1>Pomodoro Timer</h1>
+        </header>
+
+        <main class="tool-container pomodoro-container">
+            <div id="timer-status">Focus</div>
+            <div class="timer-display">
+                <svg class="timer-progress" width="250" height="250">
+                    <circle class="progress-bg" cx="125" cy="125" r="115"></circle>
+                    <circle class="progress-bar" id="progress-bar" cx="125" cy="125" r="115"></circle>
+                </svg>
+                <div id="time-left">25:00</div>
+            </div>
+            <div class="timer-controls">
+                <button class="btn btn-primary" id="start-stop-btn">Start</button>
+                <button class="btn" id="reset-btn">Reset</button>
+            </div>
+        </main>
+    </div>
+    <script src="/js/pomodoro.js"></script>
+</body>
+</html>
